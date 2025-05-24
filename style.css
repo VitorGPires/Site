@@ -751,6 +751,14 @@ footer {
 /* Responsividade */
 @media (max-width: 768px) {
 
+
+    header .container {
+        flex-direction: column; /* Empilha elementos */
+        justify-content: center; /* Centraliza verticalmente */
+        text-align: center; /* Centraliza horizontalmente */
+        position: relative; /* Para posicionar o menu toggle */
+    }
+
      .carousel-control {
         display: none !important;
     }
@@ -795,6 +803,10 @@ footer {
         padding: 0.75rem 0;
         display: block;
         width: 100%;
+    }
+    .logo {
+        order: 1; /* Coloca o logo em primeiro */
+        margin: 10px 0;
     }
     
       .logo img {
