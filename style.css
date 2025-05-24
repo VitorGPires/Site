@@ -797,8 +797,10 @@ footer {
         width: 100%;
     }
     
-    .logo img {
-        height: 55px;
+      .logo img {
+        height: 80px !important; /* Aumenta 33% no mobile */
+        width: auto;
+        margin-bottom: 10px;
     }
     
     /* Overlay para mobile */
