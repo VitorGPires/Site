@@ -20,7 +20,7 @@
     --color-accent: var(--color-bright-theme-accent);
     --color-accent-dark: rgb(40, 160, 230);
 
-    --color-card-background: rgb(10, 25, 55);
+    --color-card-background: #010e18;
     --color-header-background: var(--color-dark-theme-background);
     
     --color-border: var(--color-bright-theme-accent);
@@ -230,10 +230,14 @@ header .container {
 
 /* Carrossel Hero */
 .hero-carousel {
-    position: relative;
-    height: 80vh;
-    max-height: 800px;
+    position: relative; 
+    height: 80vh; /* MODIFICADO: Para altura total da tela */
     overflow: hidden;
+    background-color: rgba(2, 12, 40, 0.4); 
+    background-image: url(./img/Fundo.jpg); /* Fundo geral para a seção do carrossel */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 .carousel-container {
@@ -256,23 +260,22 @@ header .container {
 
 .carousel-slide.active {
     opacity: 1;
-    z-index: 1;
+    z-index: 1; 
 }
 
 .carousel-slide::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(2, 12, 40, 0.4); /* Opacidade reduzida */
-    z-index: 1;
+    background-color: rgba(2, 12, 40, 0.4); 
+    z-index: 1; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 .slide-content {
     position: absolute;
-    z-index: 2;
+    z-index: 2; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -294,7 +297,7 @@ header .container {
     color: white;
     padding: 15px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10; 
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -316,32 +319,40 @@ header .container {
 
 /* Indicadores*/
 .carousel-indicators {
+    display: none !important;
+}
+
+/* =================================================== */
+/* ESTILOS PARA O FUNDO DE PARTÍCULAS NO CARROSSEL     */
+/* =================================================== */
+
+#particles-js {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
 }
 
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid white;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.hero-carousel .carousel-container {
+    position: relative; 
+    z-index: 1; 
+    pointer-events: none; /* MODIFICADO: Adicionado para interatividade das partículas */
 }
 
-.indicator.active {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-    transform: scale(1.2);
+.hero-carousel .carousel-slide.active {
+    pointer-events: none; 
 }
 
+.hero-carousel .slide-content {
+    pointer-events: auto; 
+}
+.hero-carousel .slide-content .btn {
+    pointer-events: auto;
+}
 
+/* ... (restante do seu CSS permanece igual) ... */
 /* Seções Genéricas */
 main > section {
     padding: var(--section-padding) 0;
@@ -597,7 +608,7 @@ footer {
     color: var(--color-text);
     padding: 80px 0 40px;
     border-top: 1px solid var(--color-border-subtle);
-    margin-top: auto; /* Para fixar no fundo se necessário */
+    margin-top: auto; 
 }
 
 .footer-content {
@@ -753,10 +764,10 @@ footer {
 
 
     header .container {
-        flex-direction: column; /* Empilha elementos */
-        justify-content: center; /* Centraliza verticalmente */
-        text-align: center; /* Centraliza horizontalmente */
-        position: relative; /* Para posicionar o menu toggle */
+        flex-direction: column; 
+        justify-content: center; 
+        text-align: center; 
+        position: relative; 
     }
 
      .carousel-control {
@@ -805,12 +816,12 @@ footer {
         width: 100%;
     }
     .logo {
-        order: 1; /* Coloca o logo em primeiro */
+        order: 1; 
         margin: 10px 0;
     }
     
       .logo img {
-        height: 80px !important; /* Aumenta 33% no mobile */
+        height: 80px !important; 
         width: auto;
         margin-bottom: 10px;
     }

@@ -33,32 +33,32 @@
     </header>
 
     <main>
-        <section id="inicio" class="hero-carousel">
-            <div class="carousel-container">
-                
-                <div class="carousel-slide active" style="background-image: url();">
-                    <div class="slide-content">
-                        <h1>LocaStar HSNET</h1>
-                        <h2>Conectado onde quiser. Sem comprar, só usar.</h2>
-                        <p>Aluguel de antenas Starlink Mini para internet via satélite de alta velocidade em qualquer lugar, por curtos períodos. Simples, rápido e acessível.</p>
-                        <a href="#necessidade" class="btn btn-primary">Descubra Como Funciona</a>
-                    </div>
-                </div>
-                <div class="carousel-slide" style="background-image: url('img/banner-locastar-events.jpg');">
-                    <div class="slide-content">
-                        <h1>Internet Via Satélite Sem Complicação</h1>
-                        <h2>Sua conexão Starlink temporária e de fácil instalação com a  LocaStar HSNET .</h2>
-                        <p>Leve a internet de alta velocidade para onde for, pelo tempo que precisar. Ideal para eventos, projetos e aventuras.</p>
-                        <a href="#vantagens" class="btn btn-primary">Veja as Vantagens</a>
-                    </div>
+          <section id="inicio" class="hero-carousel">
+        <div id="particles-js"></div> <div class="carousel-container">
+            <div class="carousel-slide active" style="background-image: url();">
+                <div class="slide-content">
+                    <h1>LocaStar HSNET</h1>
+                    <h2>Conectado onde quiser. Sem comprar, só usar.</h2>
+                    <p>Aluguel de antenas Starlink Mini para internet via satélite de alta velocidade em qualquer lugar, por curtos períodos. Simples, rápido e acessível.</p>
+                    <a href="#necessidade" class="btn btn-primary">Descubra Como Funciona</a>
                 </div>
             </div>
-            <button class="carousel-control prev" aria-label="Slide Anterior">&#10094;</button>
-            <button class="carousel-control next" aria-label="Próximo Slide">&#10095;</button>
-            <div class="carousel-indicators">
+            <div class="carousel-slide" style="background-image: url('img/banner-locastar-events.jpg');">
+                <div class="slide-content">
+                    <h1>Internet Via Satélite Sem Complicação</h1>
+                    <h2>Sua conexão Starlink temporária e de fácil instalação com a  LocaStar HSNET .</h2>
+                    <p>Leve a internet de alta velocidade para onde for, pelo tempo que precisar. Ideal para eventos, projetos e aventuras.</p>
+                    <a href="#vantagens" class="btn btn-primary">Veja as Vantagens</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" aria-label="Slide Anterior">&#10094;</button>
+        <button class="carousel-control next" aria-label="Próximo Slide">&#10095;</button>
+         <div class="carousel-indicators"> {/* Note que este div estava fechando a section hero-carousel antes, corrigi o fechamento abaixo */}
                 <button class="indicator active" aria-label="Ir para o slide 1"></button>
                 <button class="indicator" aria-label="Ir para o slide 2"></button>
-            </div>
+        </div>
+
         </section>
 
         <section id="necessidade" class="service-needs-section">
@@ -179,8 +179,8 @@
             <div class="footer-content">
                 <div class="footer-logo-info">
                     <img src="./img/HSNET Logo (6).png" alt="Logo HSNET LocaStar Branca" class="footer-logo">
-                    <p>LocaStar HSNET<br>Internet via satélite, sem complicação.</p>
-                    <p>Um produto LOCAL HSNET| CNPJ: 40.480.207/0001-25</p>
+                    <p>LocaStar HSNET.<br>simples e eficiente.</p>
+                    <p>Um produto da HSNET| CNPJ: 40.480.207/0001-25</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegação</h4>
@@ -213,6 +213,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
 
